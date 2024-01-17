@@ -89,20 +89,8 @@ function render() {
 }
 render();
 
-document.addEventListener('DOMContentLoaded', function () {
-  const galleryItems = document.querySelectorAll('.gallery-item');
-
-  galleryItems.forEach(function (item) {
-    const galleryLink = item.querySelector('.gallery-link');
-
-    galleryLink.addEventListener('click', function (e) {
-      e.preventDefault();
-      return false;
-    });
-  });
-});
-
 container.addEventListener('click', e => {
+  e.preventDefault();
   if (e.target === e.currentTarget) return;
   const source = e.target.dataset.source;
 
